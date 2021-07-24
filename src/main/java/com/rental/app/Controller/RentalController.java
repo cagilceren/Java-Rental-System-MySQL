@@ -53,15 +53,16 @@ public class RentalController {
 		Inventory inventory = inventoryRepository
 				.findById(rental.inventoryId)
 				.orElseThrow(() -> new ResourceNotFoundException("There is no inventory with the id of " + rental.inventoryId));
-		if (inventory.lendability != 1) {
+		if (inventory.lendability != 1)
 			throw new InvalidInputException("The inventory with the ID of " + inventory.id + " is not lendable!");
-		}
+		if (inventory.count == 0)
+			throw new InvalidInputException("There is no more inventory with id of " + inventory.id + " to lend!");
+		inventory.count -= 1;
 		rental.borrowDate = new Date();
 		rental.returnDate = null;
 		rental.lendingUserId = 1; //TODO Authorization.
 		rental.receivingUserId = null;
 		rental.setDeposit(rental.deposit);
-		inventory.count -= 1;
 		inventoryRepository.save(inventory);
 		return(rentalRepository.save(rental));		
 	}

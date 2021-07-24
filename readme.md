@@ -66,29 +66,28 @@ In this project i have used different modules for different compartments in the 
 
 During the project I have used Spring framework and JPA, which offer many facilities while creating Java REST API Services. That is why, i didn't have to manually deal with many things, like SQL Injection and creating JSON documents (see: [PHP Rest API](https://github.com/cagilceren/PHP-Simple-TO-DO-List-REST-API.git)). 
 
-Thanks to Java persistence API (JPA), i have created an Entity class (named [Reminder.java](https://github.com/cagilceren/Java-Simple-TO-DO-List-REST-API/blob/master/src/main/java/com/example/restservice/model/Reminder.java)) to be able to communicate with the database.
-
 Thanks to the Spring framework, i created CRUD functions based on [RESTful web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by related annotations. These CRUD functions are
 
-- to **Create** a new reminder to the database "post()",
+- to **Create** a new reminder to the database `post()`,
 	
-- to **Read** a existing reminder in the database "get()",
+- to **Read** a existing reminder in the database `get()`,
 	
-- to **Update** an existing reminder in the database "put()",
+- to **Update** an existing reminder in the database `put()`,
 	
-- to **Delete** an existing reminder from the database "delete()".
+- to **Delete** an existing reminder from the database `delete()`.
 
-Moreover, i have added some logic controls. I have checked
+Moreover, i have added some logic controls. I have checked,
 - if "count" and "deposit" are positive numbers.
 - if "condition" is between 1 and 5.
 - if email has the right format.
-- if the item is lendable, before adding some inputs to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
-- if there is an item with the given inventory id every time when adding inputs to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java), or changing the inputs in [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java) or getting data from [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
+- if the item is lendable, before adding some records to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
+- if there is an item with the given inventory id, before adding records to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java), or updating the records in [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java) or getting data from [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
+- if "count" is already "0" before adding records to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
 
 During the logic controls i have checked the possible error resources and throwed a related Exception. Successful requests return "HTTP 200 OK" while unsuccessful ones return "HTTP 400 Bad Request" or "HTTP 404 Not Found".
 
 
-Additionally, i have created a "getAllRentalByInventoryId()" function in order to get all existing rental data with the given id of inventory and which are not returned (```sh returnDate = null; ```) or which are returned.
+Additionally, i have created a `getAllRentalByInventoryId()` function in order to get all existing rental data with the given id of inventory and which are not returned (`` returnDate = null; ``) or which are returned.
 
 ## TODO
 
