@@ -1,4 +1,4 @@
-<h1 align="center"> JAVA - Simple TO DO List - REST API </h1>
+<h1 align="center"> Java-Rental-System-MySQL </h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/cagilceren/PHP-Simple-TO-DO-List-REST-API/blob/main/README.md" target="_blank">
