@@ -14,11 +14,11 @@
 
 <br>
 
-This project is created as a part of semester project. 
+This project has been created as a part of semester project. 
 
 In this project, I have created REST API Service for a rental system App. This rental system is consisting of three components: [User](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/User.java), [Inventory](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Inventory.java) and [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java). They are representing three different tables in SQL. 
 
-User table has the informations about the users of the system:
+User table has the information about the users of the system:
 - name
 - email
 - password
@@ -31,7 +31,7 @@ In inventory table there are different objects and their properties:
 - serial no
 - lendability 
 
-Rental table represents the renting informations: 
+Rental table represents the renting information: 
 - inventory id (as foreign key)
 - name
 - adress (of the person who borrows the item)
@@ -62,11 +62,11 @@ Rental table represents the renting informations:
 
 ## Highlights
 
-In this project i have used different modules for different compartments in the project. So that the project is easily upgradeable. 
+In this project I have used different modules for different compartments in the project, so that the project is easily upgradeable. 
 
-During the project I have used Spring framework and JPA, which offer many facilities while creating Java REST API Services. That is why, i didn't have to manually deal with many things, like SQL Injection and creating JSON documents (see: [PHP Rest API](https://github.com/cagilceren/PHP-Simple-TO-DO-List-REST-API.git)). 
+During the project I have used Spring framework and JPA, which offer many facilities while creating Java REST API Services. That is why, I didn't have to manually deal with many things, like SQL Injection and creating JSON documents (see: [PHP Rest API](https://github.com/cagilceren/PHP-Simple-TO-DO-List-REST-API.git)). 
 
-Thanks to the Spring framework, i created CRUD functions based on [RESTful web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by related annotations. These CRUD functions are
+Thanks to the Spring framework, I created CRUD functions based on [RESTful web API design](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design) by related annotations. These CRUD functions are
 
 - to **Create** a new reminder to the database `post()`,
 	
@@ -84,10 +84,10 @@ Moreover, i have added some logic controls. I have checked,
 - if there is an item with the given inventory id, before adding records to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java), or updating the records in [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java) or getting data from [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
 - if "count" is already "0" before adding records to [Rental](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/src/main/java/com/rental/app/model/Rental.java).
 
-During the logic controls i have checked the possible error resources and throwed a related Exception. Successful requests return "HTTP 200 OK" while unsuccessful ones return "HTTP 400 Bad Request" or "HTTP 404 Not Found".
+During the logic controls I have checked the possible error resources and threw a related Exception. Successful requests return "HTTP 200 OK" while unsuccessful ones return "HTTP 400 Bad Request" or "HTTP 404 Not Found".
 
 
-Additionally, i have created a `getAllRentalByInventoryId()` function in order to get all existing rental data with the given id of inventory and which are not returned (`` returnDate = null; ``) or which are returned.
+Additionally, I have created a `getAllRentalByInventoryId()` function in order to get all existing rental data with the given id of inventory and which are not returned (`` returnDate = null; ``) or which are returned.
 
 ## TODO
 
@@ -104,7 +104,7 @@ Additionally, i have created a `getAllRentalByInventoryId()` function in order t
 $ git clone https://github.com/cagilceren/Java-Rental-System-MySQL.git
 ```
 
-> 2) Install MySQL Workbench and MySQL Server. Import the files with the .sql extention and open the [db-schema.mwb](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/db-schema.mwb) to see the overview of the database.
+> 2) Install MySQL Workbench and MySQL Server. Import the files with the .sql extension and open the [db-schema.mwb](https://github.com/cagilceren/Java-Rental-System-MySQL/blob/master/db-schema.mwb) to see the overview of the database.
 
 > [Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
